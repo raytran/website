@@ -15,6 +15,7 @@
             if (c.meta['frontmatter']['tags']) {
                 tags = c.meta['frontmatter']['tags'].split(',').map(str => str.trim());
             }
+            tags = tags.sort();
             c.meta['tags'] = tags;
             return c;
         })

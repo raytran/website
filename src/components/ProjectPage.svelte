@@ -1,5 +1,3 @@
-<script>
-</script>
 <style>
   .card {
     list-style: none;
@@ -10,6 +8,8 @@
 </style>
 
 <div class="card">
+    <a href="/projects">Back to All Projects</a>
     <slot/>
+    <a href="/projects">Back to All Projects</a>
 </div>
 

@@ -9,12 +9,12 @@
         font-size: 2em;
     }
     .thumbnail {
-        width: 100%;
+        width: 15rem;
     }
+
     .previewcard {
         background: white;
-        padding-right: 1rem;
-        padding-left: 1rem;
+        padding: 1rem;
     }
     .tag {
         background: #eee;
@@ -64,14 +64,14 @@
     }
 </style>
 <div class="previewcard">
-    <a class="title" href={path}>{meta.frontmatter.title}</a>
-    {@html marked(meta.frontmatter.summary)}
-    {#if meta.frontmatter.thumbnail !== undefined}
+    <div style="display: flex; justify-content: space-between">
+        <div>
+            <a class="title" href={path}>{meta.frontmatter.title}</a>
+            {@html marked(meta.frontmatter.summary)}
+        </div>
         <img class="thumbnail" src={'/images/' + meta.frontmatter.thumbnail } alt="thumbnail">
-    {/if}
-    <div style="text-align: left">
-        {#each meta.tags as tag}
-            <span class="tag">{tag}</span>
-        {/each}
     </div>
+    {#each meta.tags as tag}
+        <span class="tag">{tag}</span>
+    {/each}
 </div>
