@@ -5,9 +5,9 @@ author: raytran
 thumbnail: protochess1.png
 summary: A robot turret
 layout: blog
-tags: classwork, multiplayer, website
+tags: personal, physical-object 
 ---
 
 
-In the 2020 Fall semester, I took 6.031 Software Construction. This class covers the essential topics in software engineering, including unit testing, rigorous documentation, etc. 
+Nerf gun beep boop
 

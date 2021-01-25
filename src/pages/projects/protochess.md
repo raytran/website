@@ -7,7 +7,7 @@ thumbnail: protochess1.png
 summary: |  
   Online multiplayer chess website that lets you build custom pieces/boards. Written in Svelte + Rust.
 layout: blog
-tags: personal, website, webassembly, rust, svelte
+tags: personal, multiplayer, website, webassembly, rust, svelte
 ---
 
 

@@ -1,7 +1,12 @@
 <script>
+    import { createEventDispatcher } from 'svelte';
+
+    const dispatch = createEventDispatcher();
+
     import marked from "marked";
     export let meta;
     export let path;
+    export let activeTags;
 </script>
 
 <style>
@@ -16,55 +21,10 @@
         background: white;
         padding: 1rem;
     }
-    .tag {
-        background: #eee;
-        border-radius: 3px 0 0 3px;
-        color: #999;
-        display: inline-block;
-        height: 26px;
-        line-height: 26px;
-        padding: 0 20px 0 23px;
-        position: relative;
-        margin: 0 10px 10px 0;
-        text-decoration: none;
-        -webkit-transition: color 0.2s;
-    }
-
-
-    .tag::before {
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
-        content: '';
-        height: 6px;
-        left: 10px;
-        position: absolute;
-        width: 6px;
-        top: 10px;
-    }
-
-    .tag::after {
-        background: #fff;
-        border-bottom: 13px solid transparent;
-        border-left: 10px solid #eee;
-        border-top: 13px solid transparent;
-        content: '';
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    .tag:hover {
-        background-color: crimson;
-        color: white;
-    }
-
-    .tag:hover::after {
-        border-left-color: crimson;
-    }
 </style>
 <div class="previewcard">
-    <div style="display: flex; justify-content: space-between">
+    {meta.frontmatter.published}
+    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem">
         <div>
             <a class="title" href={path}>{meta.frontmatter.title}</a>
             {@html marked(meta.frontmatter.summary)}
@@ -72,6 +32,6 @@
         <img class="thumbnail" src={'/images/' + meta.frontmatter.thumbnail } alt="thumbnail">
     </div>
     {#each meta.tags as tag}
-        <span class="tag">{tag}</span>
+        <span on:click={dispatch('tagclick', tag)} class={activeTags.includes(tag) ? "tag active" : "tag"}>{tag}</span>
     {/each}
 </div>
