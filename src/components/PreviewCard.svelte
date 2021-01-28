@@ -1,5 +1,6 @@
 <script>
     import { createEventDispatcher } from 'svelte';
+    import Card from "./Card.svelte";
 
     const dispatch = createEventDispatcher();
 
@@ -16,15 +17,10 @@
     .thumbnail {
         width: 15rem;
     }
-
-    .previewcard {
-        background: white;
-        padding: 1rem;
-    }
 </style>
-<div class="previewcard">
+<Card>
     {meta.frontmatter.published}
-    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem">
+    <div style="display: flex; justify-content: space-between;">
         <div>
             <a class="title" href={path}>{meta.frontmatter.title}</a>
             {@html marked(meta.frontmatter.summary)}
@@ -34,4 +30,4 @@
     {#each meta.tags as tag}
         <span on:click={dispatch('tagclick', tag)} class={activeTags.includes(tag) ? "tag active" : "tag"}>{tag}</span>
     {/each}
-</div>
+</Card>

@@ -70,6 +70,7 @@ button:focus {
 
 
 .tag {
+  cursor: pointer;
   background: #eee;
   border-radius: 3px 0 0 3px;
   color: #999;
@@ -114,4 +115,11 @@ button:focus {
 
 .tag.active::after, .tag:hover::after {
   border-left-color: crimson;
+}
+
+.tag.active:hover::after {
+  border-left-color: #999;
+}
+.tag.active:hover {
+  background-color: #999;
 }

@@ -1,15 +1,9 @@
-<style>
-  .card {
-    list-style: none;
-    background: white;
-    padding: 1rem;
-  }
 
-</style>
-
-<div class="card">
+<script>
+    import Card from "./Card.svelte";
+</script>
+<Card>
     <a href="/projects">Back to All Projects</a>
     <slot/>
     <a href="/projects">Back to All Projects</a>
-</div>
-
+</Card>

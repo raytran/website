@@ -6,7 +6,8 @@
     import {url, layout} from "@roxi/routify";
     import {onMount} from 'svelte';
     import GithubCalendar from "github-calendar";
-    import PreviewCard from "../../components/PreviewCard.svelte"
+    import PreviewCard from "../../components/PreviewCard.svelte";
+    import Card from "../../components/Card.svelte";
 
     let activeTags = []
     let posts;
@@ -40,31 +41,19 @@
 
 
 <style>
-    #ghcalendar {
-        max-width: 60rem;
-    }
-    #tagselect, #description {
-        background: white;
-        padding: 1rem;
-        margin-bottom: 1rem;
-    }
     #postWrapper {
         display: flex;
         flex-direction: column;
     }
-    .post{
-        margin-bottom: 1em;
-        width: 100%;
-    }
 </style>
-<div id="description">
+<Card>
     <h1>Projects</h1>
     <p>
         Here are some of the projects that I've done.
     </p>
-    <div id="ghcalendar" bind:this={calendar}>A github calendar should be loading..</div>
-</div>
-<div id="tagselect">
+    <div bind:this={calendar}>A github calendar should be loading..</div>
+</Card>
+<Card>
     Active tags:
     {#each activeTags as tag}
         <span on:click={e =>{
@@ -73,17 +62,13 @@
             filterPosts(activeTags);
         }} class="active tag">{tag}</span>
     {/each}
-</div>
-<div id="postWrapper">
-    {#each posts as {meta, path}}
-        <div class="post"gs = >
-            <PreviewCard on:tagclick={e => {
+</Card>
+{#each posts as {meta, path}}
+    <PreviewCard on:tagclick={e => {
                 if (!activeTags.includes(e.detail))
                     activeTags = [...activeTags, e.detail].sort();
                 else
                     activeTags = activeTags.filter(x => x !== e.detail).sort();
                 filterPosts(activeTags);
             }} {meta} {path} {activeTags}/>
-        </div>
-    {/each}
-</div>
+{/each}
