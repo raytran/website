@@ -80,7 +80,7 @@ Let’s call each 64 bit number a bitboard. A bitboard is just a mapping from bi
 
 <img alt="square mapping" style="width:100%" src="/images/square-mapping-considerations.png">
 
-https://www.chessprogramming.org/Square_Mapping_Considerations
+[image source](https://www.chessprogramming.org/Square_Mapping_Considerations)
 
 Notice that the 0th bit is on the A1 square, and the 63rd bit is on the H8 square.
 
@@ -303,7 +303,6 @@ For example, perft(0) on the starting position gives us 20, since there are 20 p
 
 Here are some more perft values at the starting position:
 
-https://www.chessprogramming.org/Perft_Results
 
 ```
 depth nodes
@@ -317,6 +316,8 @@ depth nodes
 7     3,195,901,860
 8     84,998,978,956
 ```
+
+[Full list here](https://www.chessprogramming.org/Perft_Results)
 
 Don’t you just love exponential growth? Chess actually has a branching factor of around 35, meaning there are more possible chess positions `(10^120)` than atoms in the universe `(10^81)`.
 
@@ -377,11 +378,10 @@ Here’s how it works:
 
 At its core the search is a highly optimized version of the minimax algorithm. This algorithm walks through the game tree up to a certain depth, assuming that each player plays optimally. It picks the branch that provides the most benefit to us, while minimizing the benefit of the opposing player.
 
-Here’s a simplified diagram of that behavior:
+[Here’s a simplified diagram of that behavior](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Minimax.svg/400px-Minimax.svg.png):
 
 <img alt="Minimax behavior" style="width:100%" src="/images/minimax-diagram.png">
 
-https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Minimax.svg/400px-Minimax.svg.png
 
 
 Here is that framework applied in a negamax version, which takes advantage of the fact that if black is up by 5 points, then the overall evaluation is just -1 * 5 (hence the name Nega(tive)-(min)max).

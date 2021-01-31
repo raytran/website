@@ -20,7 +20,10 @@
   }
   .link {
     display: block;
+    font-size: 1.2rem;
     white-space: nowrap;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
   .active {
     font-weight: bold;
