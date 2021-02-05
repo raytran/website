@@ -3,7 +3,7 @@ title: Protochess.com
 subtitle: How to write a chess engine in 6 months.
 published: 2020-06-3
 author: raytran
-thumbnail: protochess1.png
+thumbnail: protochess/protochess1.png
 summary: |  
   Online multiplayer chess website that lets you build custom pieces/boards. Written in Svelte + Rust.
 layout: blog
@@ -80,7 +80,7 @@ We can use a trick! Computers are really good at doing math with 64 bit integers
 
 Let’s call each 64 bit number a bitboard. A bitboard is just a mapping from bits in the number to places on the board. We can do this in a number of ways, but in protochess this is done using little-endian rank-file mapping. It looks like this:
 
-<img alt="square mapping" style="width:100%" src="/images/square-mapping-considerations.png">
+<img alt="square mapping" style="width:100%" src="/images/protochess/square-mapping-considerations.png">
 
 [image source](https://www.chessprogramming.org/Square_Mapping_Considerations)
 
@@ -382,7 +382,7 @@ At its core the search is a highly optimized version of the minimax algorithm. T
 
 [Here’s a simplified diagram of that behavior](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Minimax.svg/400px-Minimax.svg.png):
 
-<img alt="Minimax behavior" style="width:100%" src="/images/minimax-diagram.png">
+<img alt="Minimax behavior" style="width:100%" src="/images/protochess/minimax-diagram.png">
 
 
 
@@ -446,7 +446,7 @@ So this project ended up taking waaaay longer than I thought it would. I expecte
 
 Here is a screenshot of my git history:
 
-<img alt="github screenshot" style="width:100%" src="/images/raytran-github.png">
+<img alt="github screenshot" style="width:100%" src="/images/protochess/raytran-github.png">
 
 As you can see, I started this project in early March, and just barely finished in July. I had no idea what I was getting into, but in the end I’m happy with how it came out. I rewrote the chess engine ~3 times, each time using more advanced chess-engine-specific techniques.
 
@@ -496,9 +496,9 @@ There’s a lot more to say about this but here are some closing thoughts: Be a 
 …Also, play on my chess website :)
 
 
-<img alt="site screenshot" style="width:100%" src="/images/protochess1.png">
+<img alt="site screenshot" style="width:100%" src="/images/protochess/protochess1.png">
 
-<img alt="site screenshot2" style="width:100%" src="/images/protochess2.png">
+<img alt="site screenshot2" style="width:100%" src="/images/protochess/protochess2.png">
 
 [Protochess.com](https://protochess.com)
 

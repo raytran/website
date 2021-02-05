@@ -2,7 +2,7 @@
 title: Nerf Turret
 published: 2021-01-1
 author: raytran
-thumbnail: turret.jpg
+thumbnail: nerf-turret/turret.jpg
 summary: A robot nerf turret with computer vision (Openpose).
 layout: blog
 tags: personal, physical-object, openpose 
@@ -22,12 +22,38 @@ Prior to my Fall 2020 semester at MIT, I had no experience at all with CAD. I to
 which gave me a good run through of 3D design techniques. I am by no means a mechanical engineer, and probably never will be,
 but my elementary CAD skills were enough for this project.
 
+<img alt="Turret" style="width:100%" src="/images/nerf-turret/turret-overall.png">
+
+Here is the base, which consists of two large holes surrounded by mounting holes: one for the stepper motor and the other for the wires from the main assembly.
+Notice that the smaller hole (wires) has the 4 mounting holes for the lazy susan in addition to 3 holes arranged in a triangle. 
+The three holes are (or rather, _were supposed to be_) for a [slip ring](https://en.wikipedia.org/wiki/Slip_ring). More on this later.
+
+<img alt="Turret base" style="width:100%" src="/images/nerf-turret/turret-base.png">
+
+On top of the base is this set of gears which provides more torque from the stepper motor through a 5:1 gear reduction.
+This ends up being quite important since the top half is almost 4lbs heavy.
+
+<img alt="Turret gears" style="width:100%" src="/images/nerf-turret/turret-gears.png">
+
+Mounted on the gears is the walls, which are used to hold the nerf gun up. Notice that the left wall has a slot
+cut out from it; this is used to mount the servo which controls the angle of the nerf gun.
+
+<img alt="Turret walls" style="width:100%" src="/images/nerf-turret/turret-walls.png">
+
+And finally, mounted on the walls through the set of lazy susans is the gun mount. I took advantage of NERF's tactical rail system
+and simply printed the railing onto some cylinders. Also note that the left mount is slightly extended; this is to interface with the servo on the wall.
+
+<img alt="Turret gun mount" style="width:100%" src="/images/nerf-turret/turret-gunmount.png">
+
 
 
 
 ### Electrical
 
-On the electronics side of things, the turret uses an Arduino Nano hooked up to two relays which control the flywheel and the pusher on the nerf gun.
+On the electronics side of things, the turret uses an Arduino Nano hooked up to a stepper motor driver (for the gears), the servo, and to two relays (for the flywheel and the pusher on the nerf gun).
+
+
+
 
 ### A problem
 
