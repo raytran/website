@@ -1,5 +1,0 @@
-" Installing plugins to /home/pi/.vim/bundle
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'burner/vim-svelte'
-Helptags
-

@@ -2,8 +2,8 @@
   import { metatags, page } from "@roxi/routify";
   import Navigation from "./_navigation.svelte";
 
-  $: metatags.title = `My Routify app - ${$page.title}`;
-  metatags.description = "Description coming soon...";
+  $: metatags.title = `raytran.net - ${$page.title}`;
+  metatags.description = "Raymond Tran's personal website";
 </script>
 
 <div>

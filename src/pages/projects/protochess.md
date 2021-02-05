@@ -14,6 +14,8 @@ tags: personal, multiplayer, website, webassembly, rust, svelte
 Note: this post was originally on the MIT Admissions website as a guest blogpost. If you want, you can read it on the MIT Admission site [here](https://mitadmissions.org/blogs/entry/guest-post-how-to-write-a-chess-variant-website-in-six-months/). 
 # {title} 
 ## {subtitle}
+[PROTOCHESS.COM](https://protochess.com)
+
 TLDR: I made this chess website that lets you design custom pieces and boards. Play on it [here](https://protochess.com). You can play against the chess engine I wrote as well.
 
 <div style="position: relative; width:100%; height:0; padding-bottom: 56.25%;">

@@ -5,6 +5,7 @@
     ["./index", "Home"],
     ["./projects", "Projects"],
     ["./timeline", "Timeline"],
+    ["./neat", "Things I Like"]
   ];
   function handleBurger() {
     show = !show;
@@ -78,7 +79,7 @@
 <aside>
   <nav class="mobile-nav">
     <div class="burger" on:click={handleBurger}>☰</div>
-    <div class="title">raytran.dev</div>
+    <div class="title"><a href="/">raytran.net</a></div>
     <div />
   </nav>
   <nav class:show on:click={() => (show = false)}>

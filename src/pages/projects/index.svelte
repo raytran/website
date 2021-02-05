@@ -2,6 +2,7 @@
         rel="stylesheet"
         href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
 />
+
 <script>
     import {url, layout} from "@roxi/routify";
     import {onMount} from 'svelte';
@@ -32,26 +33,29 @@
     }
     filterPosts(activeTags)
 
+    /*
     let calendar;
     onMount(async () => {
+        console.log(calendar)
         GithubCalendar(calendar, "raytran", {responsive: true, tooltips: true})
     });
+     */
 
 </script>
-
-
 <style>
-    #postWrapper {
-        display: flex;
-        flex-direction: column;
-    }
 </style>
 <Card>
     <h1>Projects</h1>
     <p>
-        Here are some of the projects that I've done.
+        Here are some of the projects that I've done, both for fun and for school.
+        <br>
+        <a href="https://github.com/raytran">You can also see some of my github repos here.</a>
     </p>
+
+    <img alt="github stats" style="width: 100%" src="https://grass-graph.moshimo.works/images/raytran.png">
+    <!--
     <div bind:this={calendar}>A github calendar should be loading..</div>
+    -->
 </Card>
 <Card>
     Active tags:
