@@ -16,14 +16,14 @@
 
 	}
 	#outer{
-		max-width: 700px;
+		max-width: 900px;
 	}
 </style>
 
 
 <div class="d-flex align-content-center justify-content-center">
 	<div id="outer" class="card d-flex flex-column flex-md-row">
-		<img class="img-fluid" id="logo" alt="raytran-logo" src="/images/raytran_logo.png">
+		<img style="width:100%" id="logo" alt="raytran-logo" src="/images/raytran_logo.png">
 		<div class="content d-flex flex-column">
 			<div>
 				<span class="card-title"> Hi, my name is <b>Raymond Tran</b>.</span><br>
