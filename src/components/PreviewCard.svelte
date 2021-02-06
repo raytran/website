@@ -15,7 +15,8 @@
 		object-position: center;
 		width: 100%;
 		height: 100%;
-		border-radius: 5px;
+		border-top-left-radius: var(--base-border-radius);
+		border-top-right-radius: var(--base-border-radius);
 	}
 
 	.thumbnail, .summary {

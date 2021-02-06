@@ -12188,7 +12188,7 @@ var routify_app = (function () {
     	return child_ctx;
     }
 
-    // (78:3) {#each meta.tags as tag}
+    // (79:3) {#each meta.tags as tag}
     function create_each_block$2(ctx) {
     	let span;
     	let t_value = /*tag*/ ctx[4] + "";
@@ -12204,7 +12204,7 @@ var routify_app = (function () {
     			set_style(span, "margin", "2px");
     			attr_dev(span, "class", "badge badge-primary active");
     			toggle_class(span, "badge-primary", /*activeTags*/ ctx[2].includes(/*tag*/ ctx[4]));
-    			add_location(span, file$9, 78, 3, 1795);
+    			add_location(span, file$9, 79, 3, 1880);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, span, anchor);
@@ -12244,7 +12244,7 @@ var routify_app = (function () {
     		block,
     		id: create_each_block$2.name,
     		type: "each",
-    		source: "(78:3) {#each meta.tags as tag}",
+    		source: "(79:3) {#each meta.tags as tag}",
     		ctx
     	});
 
@@ -12308,35 +12308,35 @@ var routify_app = (function () {
     				each_blocks[i].c();
     			}
 
-    			attr_dev(img, "class", "center-cropped svelte-ldldty");
+    			attr_dev(img, "class", "center-cropped svelte-1xn9ojc");
     			if (img.src !== (img_src_value = "/images/" + /*meta*/ ctx[0].frontmatter.thumbnail)) attr_dev(img, "src", img_src_value);
     			attr_dev(img, "alt", "thumbnail");
-    			add_location(img, file$9, 54, 7, 899);
+    			add_location(img, file$9, 55, 7, 984);
     			attr_dev(a0, "href", /*path*/ ctx[1]);
-    			add_location(a0, file$9, 53, 6, 876);
-    			attr_dev(div0, "class", "svelte-ldldty");
-    			add_location(div0, file$9, 52, 5, 864);
-    			attr_dev(div1, "class", "square svelte-ldldty");
-    			add_location(div1, file$9, 51, 4, 838);
-    			attr_dev(div2, "class", "rounded-top thumbnail svelte-ldldty");
-    			add_location(div2, file$9, 50, 3, 798);
+    			add_location(a0, file$9, 54, 6, 961);
+    			attr_dev(div0, "class", "svelte-1xn9ojc");
+    			add_location(div0, file$9, 53, 5, 949);
+    			attr_dev(div1, "class", "square svelte-1xn9ojc");
+    			add_location(div1, file$9, 52, 4, 923);
+    			attr_dev(div2, "class", "rounded-top thumbnail svelte-1xn9ojc");
+    			add_location(div2, file$9, 51, 3, 883);
     			attr_dev(a1, "href", /*path*/ ctx[1]);
-    			add_location(a1, file$9, 49, 2, 779);
+    			add_location(a1, file$9, 50, 2, 864);
     			attr_dev(h2, "class", "content-title");
-    			add_location(h2, file$9, 64, 4, 1138);
+    			add_location(h2, file$9, 65, 4, 1223);
     			attr_dev(a2, "href", /*path*/ ctx[1]);
-    			add_location(a2, file$9, 63, 3, 1118);
+    			add_location(a2, file$9, 64, 3, 1203);
     			attr_dev(p0, "class", "text-muted");
-    			add_location(p0, file$9, 68, 3, 1216);
+    			add_location(p0, file$9, 69, 3, 1301);
     			attr_dev(div3, "class", "content");
-    			add_location(div3, file$9, 62, 2, 1093);
-    			add_location(div4, file$9, 48, 1, 771);
+    			add_location(div3, file$9, 63, 2, 1178);
+    			add_location(div4, file$9, 49, 1, 856);
     			attr_dev(p1, "class", "font-size-12 m-0");
-    			add_location(p1, file$9, 75, 2, 1660);
+    			add_location(p1, file$9, 76, 2, 1745);
     			attr_dev(div5, "class", "px-card py-10 bg-light-lm bg-very-dark-dm rounded-bottom");
-    			add_location(div5, file$9, 74, 1, 1311);
+    			add_location(div5, file$9, 75, 1, 1396);
     			attr_dev(div6, "class", "card p-0 m-0 d-flex flex-column justify-content-between");
-    			add_location(div6, file$9, 47, 0, 700);
+    			add_location(div6, file$9, 48, 0, 785);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");

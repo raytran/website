@@ -14,6 +14,7 @@
   @import "../static/blog.pcss";
   @import "https://cdnjs.cloudflare.com/ajax/libs/prism/1.20.0/themes/prism-okaidia.min.css";
   @import "halfmoon/css/halfmoon-variables.min.css";
+  @import "../static/halfmoon-variable-override.css";
 </style>
 
 <Router {routes} />
