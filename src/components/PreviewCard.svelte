@@ -1,6 +1,5 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
-	import Card from "./Card.svelte";
 
 	const dispatch = createEventDispatcher();
 
@@ -11,10 +10,6 @@
 </script>
 
 <style>
-	.title {
-		font-size: 2em;
-	}
-
 	.center-cropped {
 		object-fit: cover;
 		object-position: center;
@@ -43,42 +38,48 @@
 
 	}
 
-	.content {
-		display: flex;
-		flex-direction: column;
-		padding-top: 1rem;
-		padding-bottom: 0.5rem;
-	}
-
 	@media (min-width:500px) {
 		.thumbnail {
 			margin-right: 1rem;
 		}
-		.content {
-			flex-direction: row;
-		}
-
 	}
+
 </style>
-<Card>
-	{meta.frontmatter.published}
-	<br>
-	<a class="title" href={path}>{meta.frontmatter.title}</a>
-	<div class="content">
-		<div class="thumbnail">
-			<div class="square">
-				<div>
-					<a href={path}>
-						<img class="center-cropped" src={'/images/' + meta.frontmatter.thumbnail } alt="thumbnail">
-					</a>
+<div class="card p-0 m-0 d-flex flex-column justify-content-between">
+	<div>
+		<a href={path}>
+			<div class="rounded-top thumbnail">
+				<div class="square">
+					<div>
+						<a href={path}>
+							<img class="center-cropped" src={'/images/' + meta.frontmatter.thumbnail } alt="thumbnail">
+						</a>
+					</div>
 				</div>
 			</div>
+		</a>
+
+		<!-- Nested content container inside card -->
+		<div class="content">
+			<a href={path}>
+				<h2 class="content-title">
+					{meta.frontmatter.title}
+				</h2>
+			</a>
+			<p class="text-muted">
+				{@html marked(meta.frontmatter.summary)}
+			</p>
 		</div>
-		<div class="summary">
-			{@html marked(meta.frontmatter.summary)}
-		</div>
+
 	</div>
-	{#each meta.tags as tag}
-		<span on:click={dispatch('tagclick', tag)} class={activeTags.includes(tag) ? "tag active" : "tag"}>{tag}</span>
-	{/each}
-</Card>
+	<div class="px-card py-10 bg-light-lm bg-very-dark-dm rounded-bottom"> <!-- py-10 = padding-top: 1rem (10px) and padding-bottom: 1rem (10px), bg-light-lm = background-color: var(--gray-color-light) only in light mode, bg-very-dark-dm = background-color: var(--dark-color-dark) only in dark mode, rounded-bottom = rounded corners on the bottom -->
+		<p class="font-size-12 m-0"> <!-- font-size-12 = font-size: 1.2rem (12px), m-0 = margin: 0 -->
+			Tags:
+			{#each meta.tags as tag}
+			<span on:click={dispatch('tagclick', tag)} class:badge-primary={activeTags.includes(tag)}
+				  style="cursor:pointer; margin:2px" class="badge badge-primary active">{tag}</span>
+			{/each}
+		</p>
+	</div>
+</div>
+

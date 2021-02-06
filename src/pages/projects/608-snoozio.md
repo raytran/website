@@ -8,8 +8,12 @@ layout: blog
 tags: classwork, website, physical-object
 ---
 
-*This project is a final group project for [6.08 Embedded Systems](https://iesc.io/608/S20) from Spring 2020. The following write-up is taken directly from the final submission.
-Per course policy, I am not able to provide source code.*
+
+<div class="mt-10 alert alert-primary" role="alert">
+  <h4 class="alert-heading">Note</h4>
+    This project is a final group project for <a href="https://iesc.io/608/S20">6.08 Embedded Systems</a> from Spring 2020. The following write-up is taken directly from the final submission.
+    Per course policy, I am not able to provide source code.
+</div>
 
 
 

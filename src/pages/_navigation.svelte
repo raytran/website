@@ -1,5 +1,10 @@
 <script>
   import { url, isActive } from "@roxi/routify";
+  import {onMount} from "svelte";
+  import halfmoon from "halfmoon";
+  import Fa from 'svelte-fa';
+  import {faMoon} from '@fortawesome/free-solid-svg-icons';
+  import {faBars} from '@fortawesome/free-solid-svg-icons';
   let show = false;
   const _links = [
     ["./index", "Home"],
@@ -10,83 +15,50 @@
   function handleBurger() {
     show = !show;
   }
+
 </script>
 
-<style>
-  aside {
-    text-align: center;
-  }
-  nav {
-    background: white;
-  }
-  .link {
-    display: block;
-    font-size: 1.2rem;
-    white-space: nowrap;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-  .active {
-    font-weight: bold;
-  }
-  .mobile-nav {
-    font-size: 1rem;
-    background: white;
-    padding: 1rem;
-    box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.075);
-    display: flex;
-    justify-content: space-between;
-  }
-  .mobile-nav * {
-    vertical-align: middle;
-  }
-  .title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .burger {
-    font-size: 1rem;
-  }
-  nav {
-    display: none;
-    padding: 1rem;
-    z-index: 1;
-  }
-  @media (min-width: 640px) {
-    nav {
-      margin: 16px;
-      border-radius: 4px;
-      box-shadow: 0px 5px 20px 5px rgba(0, 0, 0, 0.075);
-      display: inline-block;
-      position: relative;
-      width: auto;
-    }
-    .link {
-      padding: 0 16px;
-      min-width: 56px;
-      display: inline-block;
-    }
-    .mobile-nav {
-      display: none;
-    }
-  }
-  nav.show {
-    display: block;
-  }
-</style>
+<nav class="navbar">
+    <!-- Navbar brand -->
+    <div class="d-md-none navbar-content dropdown">
+        <button class="btn btn-action" data-toggle="dropdown" type="button">
+            <Fa icon={faBars}/>
+        </button>
+        <div class="dropdown-menu">
+                {#each _links as [path, name]}
+                    <div class="dropdown-item nav-item" class:active={$isActive(path)}>
+                        <a class="dropdown-item nav-link"  href={$url(path)}>
+                            {name}
+                        </a>
+                    </div>
+                {/each}
+        </div>
+    </div>
 
-<aside>
-  <nav class="mobile-nav">
-    <div class="burger" on:click={handleBurger}>☰</div>
-    <div class="title"><a href="/">raytran.net</a></div>
-    <div />
-  </nav>
-  <nav class:show on:click={() => (show = false)}>
-    {#each _links as [path, name]}
-      <a class="link" class:active={$isActive(path)} href={$url(path)}>
-        {name}
-      </a>
-    {/each}
-  </nav>
-</aside>
+    <a href="/" class="navbar-brand">
+        <img src="images/raytran_logo.png" alt="logo">
+        raytran.net
+    </a>
+    <!-- Navbar text
+    <span class="navbar-text text-monospace">raytran.net</span> -->
+    <!-- Navbar nav -->
+    <ul class="navbar-nav d-none d-md-flex"> <!-- d-none = display: none, d-md-flex = display: flex on medium screens and up (width > 768px) -->
+        {#each _links as [path, name]}
+            <li class="nav-item" class:active={$isActive(path)}>
+                <a class="nav-link"  href={$url(path)}>
+                    {name}
+                </a>
+            </li>
+        {/each}
+    </ul>
+
+
+
+
+    <button class="btn btn-action ml-auto" aria-label="Toggle dark mode" type="button" on:click={()=>{halfmoon.toggleDarkMode()}}>
+        <Fa icon={faMoon}/>
+    </button>
+
+
+
+</nav>

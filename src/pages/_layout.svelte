@@ -6,8 +6,12 @@
   metatags.description = "Raymond Tran's personal website";
 </script>
 
-<div>
+<div class="page-wrapper with-navbar">
   <Navigation />
-  <slot />
+  <div class="content-wrapper">
+    <div class="content">
+      <slot />
+    </div>
+  </div>
 </div>
 

@@ -7,11 +7,15 @@ thumbnail: protochess/protochess1.png
 summary: |  
   Online multiplayer chess website that lets you build custom pieces/boards. Written in Svelte + Rust.
 layout: blog
-tags: personal, multiplayer, website, webassembly, rust, svelte
+tags: personal, multiplayer, website, rust, svelte
 ---
 
 
-Note: this post was originally on the MIT Admissions website as a guest blogpost. If you want, you can read it on the MIT Admission site [here](https://mitadmissions.org/blogs/entry/guest-post-how-to-write-a-chess-variant-website-in-six-months/). 
+<div class="mt-10 alert alert-primary" role="alert">
+  <h4 class="alert-heading">Note</h4>
+  This post was originally on the MIT Admissions website as a guest blogpost. If you want, you can read it on the MIT Admission site <a href="https://mitadmissions.org/blogs/entry/guest-post-how-to-write-a-chess-variant-website-in-six-months/">here</a>.
+</div>
+
 # {title} 
 ## {subtitle}
 [PROTOCHESS.COM](https://protochess.com)

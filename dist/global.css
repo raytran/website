@@ -1,3 +1,4 @@
+/*
 html,
 body {
   position: relative;
@@ -6,7 +7,6 @@ body {
 }
 
 body {
-  /* color: #777; */
   color: rgba(0,0,0,0.62);
   margin: 0;
   box-sizing: border-box;
@@ -123,3 +123,4 @@ button:focus {
 .tag.active:hover {
   background-color: #999;
 }
+*/
