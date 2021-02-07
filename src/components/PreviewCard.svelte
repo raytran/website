@@ -15,8 +15,6 @@
 		object-position: center;
 		width: 100%;
 		height: 100%;
-		border-top-left-radius: var(--base-border-radius);
-		border-top-right-radius: var(--base-border-radius);
 	}
 
 	.thumbnail, .summary {
@@ -46,7 +44,7 @@
 	}
 
 </style>
-<div class="card p-0 m-0 d-flex flex-column justify-content-between">
+<div class="card p-0 m-0 d-flex flex-column justify-content-between overflow-hidden">
 	<div>
 		<a href={path}>
 			<div class="rounded-top thumbnail">
