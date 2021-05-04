@@ -1,6 +1,11 @@
 # Timeline
 ## Spring 2021
-- coming soon
+- 6.824 Distributed Systems (Grad)
+- 6.115 Microcontroller Project Laboratory
+- 6.033 Computer Systems Engineering
+- 6.046 Design and Analysis of Algorithms
+- 24.09 Minds and Machines
+- 7.014 Introductory Biology
 
 ## IAP 2021
 - Battlecode! Team: Download more RAM
