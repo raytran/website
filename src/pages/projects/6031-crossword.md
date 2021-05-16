@@ -18,10 +18,10 @@ Our group used Vue for the frontend, and a multithreaded Java backend. The backe
 
 Per the course policy, I am unable to provide the full source, but here are some nice screenshots of the website:
 
-<img alt="Crossword 1" style="width:100%" src="/images/6031-crossword/crossword1.png">
+<img alt="Crossword 1" style="width:100%" src="/6031-crossword/crossword1.png">
 
-<img alt="Crossword 2" style="width:100%" src="/images/6031-crossword/crossword2.png">
+<img alt="Crossword 2" style="width:100%" src="/6031-crossword/crossword2.png">
 
 And when you win....
 
-<img alt="Crossword 3" style="width:100%" src="/images/6031-crossword/crossword3.png">
+<img alt="Crossword 3" style="width:100%" src="/6031-crossword/crossword3.png">

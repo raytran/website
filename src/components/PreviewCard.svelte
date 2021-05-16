@@ -51,7 +51,7 @@
 				<div class="square">
 					<div>
 						<a href={path}>
-							<img class="center-cropped" src={'/images/' + meta.frontmatter.thumbnail } alt="thumbnail">
+							<img class="center-cropped" src={meta.frontmatter.thumbnail } alt="thumbnail">
 						</a>
 					</div>
 				</div>
