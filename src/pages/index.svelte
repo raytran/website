@@ -27,24 +27,14 @@
 		<div class="content d-flex flex-column">
 			<div>
 				<span class="card-title"> Hi, my name is <b>Raymond Tran</b>.</span><br>
-				I'm a sophomore at MIT majoring in Electrical Engineering & Computer Science.
-				Here is my <a class="hyperlink" href="https://drive.google.com/file/d/1ZYyUQ5egN5oHIuxHjoMIhimj27dHf3Nf/view?usp=sharing">resume</a>.
+				I'm a junior at MIT majoring in Electrical Engineering & Computer Science.
+				Here is my <a class="hyperlink" href="https://drive.google.com/file/d/1EmFuNo48F_G1Ww3PZGoFo4l1qjZNYKR5/view?usp=sharing">resume</a>.
 			</div>
 			<hr>
 			<div class="d-flex" id="icon-links">
 				<div class="mr-auto icon">
 					<a href="https://github.com/raytran">
 						<Fa size="2x" icon={faGithub}/>
-					</a>
-				</div>
-				<div class="mr-auto icon">
-					<a href="https://instagram.com/rayt.ran">
-						<Fa size="2x" icon={faInstagram}/>
-					</a>
-				</div>
-				<div class="mr-auto icon">
-					<a href="https://www.facebook.com/raymond.tran.3158/">
-						<Fa size="2x" icon={faFacebook}/>
 					</a>
 				</div>
 				<div class="mr-auto icon">
